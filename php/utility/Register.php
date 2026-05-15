@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// Radiorecord SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+RadiorecordUtility::setRegistrar(function (RadiorecordUtility $u): void {
+    $u->clean = [RadiorecordClean::class, 'call'];
+    $u->done = [RadiorecordDone::class, 'call'];
+    $u->make_error = [RadiorecordMakeError::class, 'call'];
+    $u->feature_add = [RadiorecordFeatureAdd::class, 'call'];
+    $u->feature_hook = [RadiorecordFeatureHook::class, 'call'];
+    $u->feature_init = [RadiorecordFeatureInit::class, 'call'];
+    $u->fetcher = [RadiorecordFetcher::class, 'call'];
+    $u->make_fetch_def = [RadiorecordMakeFetchDef::class, 'call'];
+    $u->make_context = [RadiorecordMakeContext::class, 'call'];
+    $u->make_options = [RadiorecordMakeOptions::class, 'call'];
+    $u->make_request = [RadiorecordMakeRequest::class, 'call'];
+    $u->make_response = [RadiorecordMakeResponse::class, 'call'];
+    $u->make_result = [RadiorecordMakeResult::class, 'call'];
+    $u->make_point = [RadiorecordMakePoint::class, 'call'];
+    $u->make_spec = [RadiorecordMakeSpec::class, 'call'];
+    $u->make_url = [RadiorecordMakeUrl::class, 'call'];
+    $u->param = [RadiorecordParam::class, 'call'];
+    $u->prepare_auth = [RadiorecordPrepareAuth::class, 'call'];
+    $u->prepare_body = [RadiorecordPrepareBody::class, 'call'];
+    $u->prepare_headers = [RadiorecordPrepareHeaders::class, 'call'];
+    $u->prepare_method = [RadiorecordPrepareMethod::class, 'call'];
+    $u->prepare_params = [RadiorecordPrepareParams::class, 'call'];
+    $u->prepare_path = [RadiorecordPreparePath::class, 'call'];
+    $u->prepare_query = [RadiorecordPrepareQuery::class, 'call'];
+    $u->result_basic = [RadiorecordResultBasic::class, 'call'];
+    $u->result_body = [RadiorecordResultBody::class, 'call'];
+    $u->result_headers = [RadiorecordResultHeaders::class, 'call'];
+    $u->transform_request = [RadiorecordTransformRequest::class, 'call'];
+    $u->transform_response = [RadiorecordTransformResponse::class, 'call'];
+});

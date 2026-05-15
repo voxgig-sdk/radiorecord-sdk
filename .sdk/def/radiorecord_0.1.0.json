@@ -1,0 +1,167 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Radiorecord API",
+    "description": "This API provides a JavaScript library for interacting with radiorecord.ru, allowing users to access charts, tracks, and other resources related to music streaming. It simplifies the integration of radiorecord functionalities into applications, making it easier for developers to use its features.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/radiorecord"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.radiorecord.ru",
+      "description": "Radiorecord API server"
+    }
+  ],
+  "paths": {
+    "/api/chart/club": {
+      "get": {
+        "summary": "Get club chart",
+        "description": "Retrieves the club chart from radiorecord.ru, containing popular tracks and music information.",
+        "operationId": "getClubChart",
+        "tags": [
+          "Charts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved club chart",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "description": "Track ID"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Track title"
+                          },
+                          "artist": {
+                            "type": "string",
+                            "description": "Artist name"
+                          },
+                          "position": {
+                            "type": "integer",
+                            "description": "Chart position"
+                          },
+                          "image": {
+                            "type": "string",
+                            "description": "Track cover image URL"
+                          },
+                          "duration": {
+                            "type": "integer",
+                            "description": "Track duration in seconds"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Track": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique track identifier"
+          },
+          "title": {
+            "type": "string",
+            "description": "Track title"
+          },
+          "artist": {
+            "type": "string",
+            "description": "Artist name"
+          },
+          "position": {
+            "type": "integer",
+            "description": "Position in chart"
+          },
+          "image": {
+            "type": "string",
+            "format": "uri",
+            "description": "Track cover image URL"
+          },
+          "duration": {
+            "type": "integer",
+            "description": "Track duration in seconds"
+          }
+        }
+      },
+      "ChartResponse": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Track"
+            }
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message describing what went wrong"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Charts",
+      "description": "Operations related to music charts and track listings"
+    }
+  ]
+}

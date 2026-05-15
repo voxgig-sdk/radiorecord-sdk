@@ -1,0 +1,41 @@
+{
+  "existing": {
+    "chart": {
+      "CHART00": {
+        "artist": "s3c",
+        "duration": "s3d",
+        "id": "CHART00",
+        "image": "s3f",
+        "position": "s40",
+        "title": "s41"
+      },
+      "CHART01": {
+        "artist": "s78",
+        "duration": "s79",
+        "id": "CHART01",
+        "image": "s7b",
+        "position": "s7c",
+        "title": "s7d"
+      },
+      "CHART02": {
+        "artist": "sb4",
+        "duration": "sb5",
+        "id": "CHART02",
+        "image": "sb7",
+        "position": "sb8",
+        "title": "sb9"
+      }
+    }
+  },
+  "new": {
+    "chart": {
+      "chart_ref01": {
+        "artist": "sf0",
+        "duration": "sf1",
+        "image": "sf3",
+        "position": "sf4",
+        "title": "sf5"
+      }
+    }
+  }
+}

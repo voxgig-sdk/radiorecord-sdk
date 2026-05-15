@@ -1,0 +1,23 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        url: "https://github.com/l0v3m0n3y/radiorecord"
+      }
+      description: "This API provides a JavaScript library for interacting with radiorecord.ru, allowing users to access charts, tracks, and other resources related to music streaming. It simplifies the integration of radiorecord functionalities into applications, making it easier for developers to use its features."
+      servers: [
+        {
+          description: "Radiorecord API server"
+          url: "https://www.radiorecord.ru"
+        }
+      ]
+      title: "Radiorecord API"
+      version: "1.0.0"
+    }
+  }
+}
+
+}

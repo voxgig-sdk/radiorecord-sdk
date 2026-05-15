@@ -1,0 +1,22 @@
+# BasicChartFlow
+
+main: kit: flow: BasicChartFlow:
+{
+  entity: "chart",
+  kind: "basic",
+  name: "BasicChartFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "chart_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicChartFlow"
+}

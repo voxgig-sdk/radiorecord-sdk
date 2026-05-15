@@ -1,0 +1,15 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 1
+  metrics: count: path: 1
+  metrics: count: method: 1
+
+  entity: chart: {
+    path: "/api/chart/club": {
+      action: "club": {}
+      op: list: method: *GET
+    }
+  }
+
+}
