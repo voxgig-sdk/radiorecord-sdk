@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/radiorecord-sdk"
-	"github.com/voxgig-sdk/radiorecord-sdk/core"
+	sdk "github.com/voxgig-sdk/radiorecord-sdk/go"
+	"github.com/voxgig-sdk/radiorecord-sdk/go/core"
 )
 
 func TestChartDirect(t *testing.T) {

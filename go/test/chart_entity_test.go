@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/radiorecord-sdk"
-	"github.com/voxgig-sdk/radiorecord-sdk/core"
+	sdk "github.com/voxgig-sdk/radiorecord-sdk/go"
+	"github.com/voxgig-sdk/radiorecord-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/radiorecord-sdk/go/utility/struct"
 )
 
 func TestChartEntity(t *testing.T) {

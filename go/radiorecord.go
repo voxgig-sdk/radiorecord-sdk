@@ -1,10 +1,10 @@
 package voxgigradiorecordsdk
 
 import (
-	"github.com/voxgig-sdk/radiorecord-sdk/core"
-	"github.com/voxgig-sdk/radiorecord-sdk/entity"
-	"github.com/voxgig-sdk/radiorecord-sdk/feature"
-	_ "github.com/voxgig-sdk/radiorecord-sdk/utility"
+	"github.com/voxgig-sdk/radiorecord-sdk/go/core"
+	"github.com/voxgig-sdk/radiorecord-sdk/go/entity"
+	"github.com/voxgig-sdk/radiorecord-sdk/go/feature"
+	_ "github.com/voxgig-sdk/radiorecord-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

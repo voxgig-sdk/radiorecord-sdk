@@ -1,7 +1,7 @@
 package feature
 
 import (
-	"github.com/voxgig-sdk/radiorecord-sdk/core"
+	"github.com/voxgig-sdk/radiorecord-sdk/go/core"
 )
 
 type BaseFeature struct {
