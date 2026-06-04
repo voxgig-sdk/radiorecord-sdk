@@ -61,14 +61,12 @@ def _chart_direct_setup(mockres):
     env = runner.env_override({
         "RADIORECORD_TEST_CHART_ENTID": {},
         "RADIORECORD_TEST_LIVE": "FALSE",
-        "RADIORECORD_APIKEY": "NONE",
     })
 
     live = env.get("RADIORECORD_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
-            "apikey": env.get("RADIORECORD_APIKEY"),
         }
         client = RadiorecordSDK(merged_opts)
         return {

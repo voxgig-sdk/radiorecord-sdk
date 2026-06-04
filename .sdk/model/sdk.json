@@ -16,7 +16,15 @@
           }
         ],
         "title": "Radiorecord API",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "tagline": "Charts and tracks from Radio Record, a Russian electronic and dance music broadcaster",
+        "homepage": "https://www.radiorecord.ru",
+        "docs_url": "https://freepublicapis.com/radiorecord-api",
+        "about_md": "[Radio Record](https://www.radiorecord.ru) is a Russian music broadcaster running since 1997, streaming 100+ channels of electronic and dance music (house, trance, techno, EDM, trap and more). This SDK wraps a small public surface exposed by `www.radiorecord.ru` that returns chart data used on the site.\n\nWhat you get from the API:\n\n- Superchart track listings (artist, title and related metadata as published on the site)\n- Data feeding the site's own chart pages (e.g. Superchart, Club chart, NEW)\n\nOperational notes:\n\n- No authentication is documented for the public chart endpoints.\n- CORS is reported as disabled, so calls from browsers will typically need a server-side proxy.\n- The API is unofficial in the sense that Radio Record does not publish formal developer documentation; behaviour may change without notice.",
+        "entity_desc": {
+          "chart": "A Radio Record chart such as the Superchart, served from paths like `/api/superchart`, containing the ordered list of tracks currently featured on the site."
+        },
+        "auth": false
       },
       "config": {
         "auth": {
@@ -24,7 +32,15 @@
         },
         "headers": {
           "content-type": "application/json"
-        }
+        },
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ]
       },
       "entity": {
         "chart": {

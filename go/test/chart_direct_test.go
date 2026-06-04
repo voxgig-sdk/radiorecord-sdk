@@ -93,14 +93,12 @@ func chartDirectSetup(mockres any) *chartDirectSetupResult {
 	env := envOverride(map[string]any{
 		"RADIORECORD_TEST_CHART_ENTID": map[string]any{},
 		"RADIORECORD_TEST_LIVE":    "FALSE",
-		"RADIORECORD_APIKEY":       "NONE",
 	})
 
 	live := env["RADIORECORD_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["RADIORECORD_APIKEY"],
 		}
 		client := sdk.NewRadiorecordSDK(mergedOpts)
 
