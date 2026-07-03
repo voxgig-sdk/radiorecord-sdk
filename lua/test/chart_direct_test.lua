@@ -63,12 +63,14 @@ function chart_direct_setup(mockres)
   local env = runner.env_override({
     ["RADIORECORD_TEST_CHART_ENTID"] = {},
     ["RADIORECORD_TEST_LIVE"] = "FALSE",
+    ["RADIORECORD_APIKEY"] = "NONE",
   })
 
   local live = env["RADIORECORD_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
+      apikey = env["RADIORECORD_APIKEY"],
     }
     local client = sdk.new(merged_opts)
     return {

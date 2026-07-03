@@ -113,6 +113,7 @@ function basicSetup(extra?: any) {
     'RADIORECORD_TEST_CHART_ENTID': idmap,
     'RADIORECORD_TEST_LIVE': 'FALSE',
     'RADIORECORD_TEST_EXPLAIN': 'FALSE',
+    'RADIORECORD_APIKEY': 'NONE',
   })
 
   idmap = env['RADIORECORD_TEST_CHART_ENTID']
@@ -122,6 +123,7 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new RadiorecordSDK(merge([
       {
+        apikey: env.RADIORECORD_APIKEY,
       },
       extra
     ]))

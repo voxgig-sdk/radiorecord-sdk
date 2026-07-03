@@ -1,23 +1,8 @@
 # Radiorecord SDK
 
-Charts and tracks from Radio Record, a Russian electronic and dance music broadcaster
+Radiorecord API client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About Radiorecord API
-
-[Radio Record](https://www.radiorecord.ru) is a Russian music broadcaster running since 1997, streaming 100+ channels of electronic and dance music (house, trance, techno, EDM, trap and more). This SDK wraps a small public surface exposed by `www.radiorecord.ru` that returns chart data used on the site.
-
-What you get from the API:
-
-- Superchart track listings (artist, title and related metadata as published on the site)
-- Data feeding the site's own chart pages (e.g. Superchart, Club chart, NEW)
-
-Operational notes:
-
-- No authentication is documented for the public chart endpoints.
-- CORS is reported as disabled, so calls from browsers will typically need a server-side proxy.
-- The API is unofficial in the sense that Radio Record does not publish formal developer documentation; behaviour may change without notice.
 
 ## Try it
 
@@ -51,29 +36,31 @@ gem install radiorecord-sdk
 luarocks install radiorecord-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { RadiorecordSDK } from 'radiorecord'
 
-const client = new RadiorecordSDK({})
+const client = new RadiorecordSDK({
+  apikey: process.env.RADIORECORD_APIKEY,
+})
 
 // List all charts
 const charts = await client.Chart().list()
+console.log(charts.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -103,7 +90,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Chart** | A Radio Record chart such as the Superchart, served from paths like `/api/superchart`, containing the ordered list of tracks currently featured on the site. | `/api/chart/club` |
+| **Chart** |  | `/api/chart/club` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -113,12 +100,16 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from radiorecord_sdk import RadiorecordSDK
 
-client = RadiorecordSDK({})
+client = RadiorecordSDK({
+    "apikey": os.environ.get("RADIORECORD_APIKEY"),
+})
 
 # List all charts
-charts, err = client.Chart(None).list(None, None)
+charts, err = client.Chart().list()
+print(charts)
 ```
 
 ### PHP
@@ -127,10 +118,13 @@ charts, err = client.Chart(None).list(None, None)
 <?php
 require_once 'radiorecord_sdk.php';
 
-$client = new RadiorecordSDK([]);
+$client = new RadiorecordSDK([
+    "apikey" => getenv("RADIORECORD_APIKEY"),
+]);
 
 // List all charts
-[$charts, $err] = $client->Chart(null)->list(null, null);
+[$charts, $err] = $client->Chart()->list();
+print_r($charts);
 ```
 
 ### Golang
@@ -138,10 +132,13 @@ $client = new RadiorecordSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/radiorecord-sdk/go"
 
-client := sdk.NewRadiorecordSDK(map[string]any{})
+client := sdk.NewRadiorecordSDK(map[string]any{
+    "apikey": os.Getenv("RADIORECORD_APIKEY"),
+})
 
 // List all charts
 charts, err := client.Chart(nil).List(nil, nil)
+fmt.Println(charts)
 ```
 
 ### Ruby
@@ -149,10 +146,13 @@ charts, err := client.Chart(nil).List(nil, nil)
 ```ruby
 require_relative "Radiorecord_sdk"
 
-client = RadiorecordSDK.new({})
+client = RadiorecordSDK.new({
+  "apikey" => ENV["RADIORECORD_APIKEY"],
+})
 
 # List all charts
-charts, err = client.Chart(nil).list(nil, nil)
+charts, err = client.Chart().list
+puts charts
 ```
 
 ### Lua
@@ -160,10 +160,13 @@ charts, err = client.Chart(nil).list(nil, nil)
 ```lua
 local sdk = require("radiorecord_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("RADIORECORD_APIKEY"),
+})
 
 -- List all charts
-local charts, err = client:Chart(nil):list(nil, nil)
+local charts, err = client:Chart():list()
+print(charts)
 ```
 
 ## Unit testing in offline mode
@@ -182,25 +185,21 @@ const result = await client.Chart().load({ id: 'test01' })
 ### Python
 
 ```python
-client = RadiorecordSDK.test(None, None)
-result, err = client.Chart(None).load(
-    {"id": "test01"}, None
-)
+client = RadiorecordSDK.test()
+result, err = client.Chart().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = RadiorecordSDK::test(null, null);
-[$result, $err] = $client->Chart(null)->load(
-    ["id" => "test01"], null
-);
+$client = RadiorecordSDK::test();
+[$result, $err] = $client->Chart()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Chart(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -209,19 +208,15 @@ result, err := client.Chart(nil).Load(
 ### Ruby
 
 ```ruby
-client = RadiorecordSDK.test(nil, nil)
-result, err = client.Chart(nil).load(
-  { "id" => "test01" }, nil
-)
+client = RadiorecordSDK.test
+result, err = client.Chart().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Chart(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Chart():load({ id = "test01" })
 ```
 
 ## How it works
@@ -325,11 +320,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the Radiorecord API
-
-- Upstream: [https://www.radiorecord.ru](https://www.radiorecord.ru)
-- API docs: [https://freepublicapis.com/radiorecord-api](https://freepublicapis.com/radiorecord-api)
 
 ---
 

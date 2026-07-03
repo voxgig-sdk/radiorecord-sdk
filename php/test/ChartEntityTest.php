@@ -86,6 +86,7 @@ function chart_basic_setup($extra)
         "RADIORECORD_TEST_CHART_ENTID" => $idmap,
         "RADIORECORD_TEST_LIVE" => "FALSE",
         "RADIORECORD_TEST_EXPLAIN" => "FALSE",
+        "RADIORECORD_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,6 +98,7 @@ function chart_basic_setup($extra)
     if ($env["RADIORECORD_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
+                "apikey" => $env["RADIORECORD_APIKEY"],
             ],
             $extra ?? [],
         ]);

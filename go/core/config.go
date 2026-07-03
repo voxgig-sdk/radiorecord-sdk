@@ -14,6 +14,9 @@ func MakeConfig() map[string]any {
 		},
 		"options": map[string]any{
 			"base": "https://www.radiorecord.ru",
+			"auth": map[string]any{
+				"prefix": "Bearer",
+			},
 			"headers": map[string]any{
 				"content-type": "application/json",
 			},
@@ -25,54 +28,57 @@ func MakeConfig() map[string]any {
 			"chart": map[string]any{
 				"fields": []any{
 					map[string]any{
+						"active": true,
 						"name": "artist",
 						"req": false,
 						"type": "`$STRING`",
-						"active": true,
 						"index$": 0,
 					},
 					map[string]any{
+						"active": true,
 						"name": "duration",
 						"req": false,
 						"type": "`$INTEGER`",
-						"active": true,
 						"index$": 1,
 					},
 					map[string]any{
+						"active": true,
 						"name": "id",
 						"req": false,
 						"type": "`$INTEGER`",
-						"active": true,
 						"index$": 2,
 					},
 					map[string]any{
+						"active": true,
 						"name": "image",
 						"req": false,
 						"type": "`$STRING`",
-						"active": true,
 						"index$": 3,
 					},
 					map[string]any{
+						"active": true,
 						"name": "position",
 						"req": false,
 						"type": "`$INTEGER`",
-						"active": true,
 						"index$": 4,
 					},
 					map[string]any{
+						"active": true,
 						"name": "title",
 						"req": false,
 						"type": "`$STRING`",
-						"active": true,
 						"index$": 5,
 					},
 				},
 				"name": "chart",
 				"op": map[string]any{
 					"list": map[string]any{
+						"input": "data",
 						"name": "list",
 						"points": []any{
 							map[string]any{
+								"active": true,
+								"args": map[string]any{},
 								"method": "GET",
 								"orig": "/api/chart/club",
 								"parts": []any{
@@ -87,12 +93,9 @@ func MakeConfig() map[string]any {
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"active": true,
-								"args": map[string]any{},
 								"index$": 0,
 							},
 						},
-						"input": "data",
 						"key$": "list",
 					},
 				},

@@ -38,6 +38,10 @@ class Config {
   options = {
     base: 'https://www.radiorecord.ru',
 
+    auth: {
+      prefix: 'Bearer',
+    },
+
     headers: {
       "content-type": "application/json"
     },
@@ -55,54 +59,57 @@ class Config {
     "chart": {
       "fields": [
         {
+          "active": true,
           "name": "artist",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 0
         },
         {
+          "active": true,
           "name": "duration",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 1
         },
         {
+          "active": true,
           "name": "id",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 2
         },
         {
+          "active": true,
           "name": "image",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 3
         },
         {
+          "active": true,
           "name": "position",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 4
         },
         {
+          "active": true,
           "name": "title",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 5
         }
       ],
       "name": "chart",
       "op": {
         "list": {
+          "input": "data",
           "name": "list",
           "points": [
             {
+              "active": true,
+              "args": {},
               "method": "GET",
               "orig": "/api/chart/club",
               "parts": [
@@ -117,12 +124,9 @@ class Config {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
-              "args": {},
               "index$": 0
             }
           ],
-          "input": "data",
           "key$": "list"
         }
       },

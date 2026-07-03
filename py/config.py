@@ -15,6 +15,9 @@ def make_config():
         },
         "options": {
             "base": "https://www.radiorecord.ru",
+            "auth": {
+                "prefix": "Bearer",
+            },
             "headers": {
         "content-type": "application/json",
       },
@@ -26,54 +29,57 @@ def make_config():
       "chart": {
         "fields": [
           {
+            "active": True,
             "name": "artist",
             "req": False,
             "type": "`$STRING`",
-            "active": True,
             "index$": 0,
           },
           {
+            "active": True,
             "name": "duration",
             "req": False,
             "type": "`$INTEGER`",
-            "active": True,
             "index$": 1,
           },
           {
+            "active": True,
             "name": "id",
             "req": False,
             "type": "`$INTEGER`",
-            "active": True,
             "index$": 2,
           },
           {
+            "active": True,
             "name": "image",
             "req": False,
             "type": "`$STRING`",
-            "active": True,
             "index$": 3,
           },
           {
+            "active": True,
             "name": "position",
             "req": False,
             "type": "`$INTEGER`",
-            "active": True,
             "index$": 4,
           },
           {
+            "active": True,
             "name": "title",
             "req": False,
             "type": "`$STRING`",
-            "active": True,
             "index$": 5,
           },
         ],
         "name": "chart",
         "op": {
           "list": {
+            "input": "data",
             "name": "list",
             "points": [
               {
+                "active": True,
+                "args": {},
                 "method": "GET",
                 "orig": "/api/chart/club",
                 "parts": [
@@ -88,12 +94,9 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
-                "active": True,
-                "args": {},
                 "index$": 0,
               },
             ],
-            "input": "data",
             "key$": "list",
           },
         },
