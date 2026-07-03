@@ -8,12 +8,14 @@ source = {
   dir = "radiorecord-sdk/lua"
 }
 description = {
-  summary = "Radiorecord SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the Radiorecord public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/radiorecord-sdk",
+  issues_url = "https://github.com/voxgig-sdk/radiorecord-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "radiorecord" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

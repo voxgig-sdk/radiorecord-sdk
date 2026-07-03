@@ -10,13 +10,13 @@ The Ruby SDK for the Radiorecord API — an entity-oriented client using idiomat
 
 ## Install
 ```bash
-gem install radiorecord-sdk
+gem install voxgig-sdk-radiorecord
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "radiorecord-sdk"
+gem "voxgig-sdk-radiorecord"
 ```
 
 Then run:

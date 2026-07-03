@@ -10,7 +10,7 @@ The TypeScript SDK for the Radiorecord API — a type-safe, entity-oriented clie
 
 ## Install
 ```bash
-npm install radiorecord
+npm install @voxgig-sdk/radiorecord
 ```
 ## Tutorial: your first API call
 

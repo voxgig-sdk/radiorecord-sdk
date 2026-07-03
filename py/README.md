@@ -10,7 +10,7 @@ The Python SDK for the Radiorecord API — an entity-oriented client following P
 
 ## Install
 ```bash
-pip install radiorecord-sdk
+pip install voxgig-sdk-radiorecord
 ```
 
 Or install from source:

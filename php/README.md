@@ -10,7 +10,7 @@ The PHP SDK for the Radiorecord API — an entity-oriented client using PHP conv
 
 ## Install
 ```bash
-composer require voxgig/radiorecord-sdk
+composer require voxgig-sdk/radiorecord
 ```
 
 
