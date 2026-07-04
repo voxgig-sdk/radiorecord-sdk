@@ -204,14 +204,7 @@ class RadiorecordSDK {
 
 
 
-  _chart?: ChartEntity
-
-  // Idiomatic facade: `client.chart.list()` / `client.chart.load({ id })`.
-  get chart(): ChartEntity {
-    return (this._chart ??= new ChartEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.chart` instead. */
+  // Entity access: `client.Chart().list()` / `client.Chart().load({ id })`.
   Chart(data?: any) {
     const self = this
     return new ChartEntity(self,data)

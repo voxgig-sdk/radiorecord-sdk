@@ -86,7 +86,7 @@ same parameters as `direct()`. Raises on error.
 ## ChartEntity
 
 ```ruby
-chart = client.chart
+chart = client.Chart
 ```
 
 ### Fields
@@ -107,7 +107,7 @@ chart = client.chart
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.chart.list(nil)
+results = client.Chart.list(nil)
 ```
 
 ### Common Methods

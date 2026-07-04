@@ -85,7 +85,7 @@ Prepare a fetch definition without sending the request. Returns the
 ## ChartEntity
 
 ```php
-$chart = $client->chart();
+$chart = $client->Chart();
 ```
 
 ### Fields
@@ -106,7 +106,7 @@ $chart = $client->chart();
 List entities matching the given criteria. Returns an array. Throws on error.
 
 ```php
-$results = $client->chart()->list([]);
+$results = $client->Chart()->list([]);
 ```
 
 ### Common Methods

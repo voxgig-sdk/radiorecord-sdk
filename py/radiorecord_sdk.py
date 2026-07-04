@@ -220,25 +220,15 @@ class RadiorecordSDK:
         }
 
 
-    @property
-    def chart(self):
-        """Idiomatic facade: client.chart.list() / client.chart.load({"id": ...})."""
-        from entity.chart_entity import ChartEntity
-        cached = getattr(self, "_chart", None)
-        if cached is None:
-            cached = ChartEntity(self, None)
-            self._chart = cached
-        return cached
-
-    def Chart(self, data=None):
-        # Deprecated: use client.chart instead.
+    def Chart(self, data=None) -> "ChartEntity":
+        """Entity factory: client.Chart().list({}) / client.Chart().load({"id": ...})."""
         from entity.chart_entity import ChartEntity
         return ChartEntity(self, data)
 
 
 
     @classmethod
-    def test(cls, testopts=None, sdkopts=None):
+    def test(cls, testopts=None, sdkopts=None) -> "RadiorecordSDK":
         if sdkopts is None:
             sdkopts = {}
         sdkopts = vs.clone(sdkopts)
@@ -258,3 +248,9 @@ class RadiorecordSDK:
         sdk.mode = "test"
 
         return sdk
+
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from entity.chart_entity import ChartEntity

@@ -31,14 +31,16 @@ from radiorecord_sdk import RadiorecordSDK
 client = RadiorecordSDK()
 ```
 
-### 2. List charts
+### 2. List chart records
+
+`list()` returns a `list` of records (each a `dict`) and raises on
+error — iterate it directly.
 
 ```python
 try:
-    result = client.chart.list()
-    for item in result:
-        d = item.data_get()
-        print(d["id"], d["name"])
+    charts = client.Chart().list({})
+    for chart in charts:
+        print(chart)
 except Exception as err:
     print(f"list failed: {err}")
 ```
@@ -86,8 +88,9 @@ Create a mock client for unit testing — no server required:
 ```python
 client = RadiorecordSDK.test()
 
-result = client.chart.load({"id": "test01"})
-# result contains mock response data
+# Entity ops return the bare record and raise on error.
+chart = client.Chart().load({"id": "test01"})
+# chart contains the mock response record
 ```
 
 ### Use a custom fetch function
@@ -225,7 +228,7 @@ API path: `/api/chart/club`
 
 ### Chart
 
-Create an instance: `const chart = client.chart`
+Create an instance: `chart = client.Chart()`
 
 #### Operations
 
@@ -246,8 +249,8 @@ Create an instance: `const chart = client.chart`
 
 #### Example: List
 
-```ts
-const charts = await client.chart.list()
+```python
+charts = client.Chart().list({})
 ```
 
 
@@ -321,7 +324,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```python
-chart = client.chart
+chart = client.Chart()
 chart.load({"id": "example_id"})
 
 # chart.data_get() now returns the loaded chart data

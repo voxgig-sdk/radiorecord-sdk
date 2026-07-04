@@ -83,7 +83,7 @@ same parameters as `direct()`.
 ## ChartEntity
 
 ```lua
-local chart = client:chart(nil)
+local chart = client:Chart(nil)
 ```
 
 ### Fields
@@ -104,7 +104,7 @@ local chart = client:chart(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:chart():list()
+local results, err = client:Chart():list()
 ```
 
 ### Common Methods

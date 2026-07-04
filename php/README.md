@@ -29,18 +29,16 @@ require_once 'radiorecord_sdk.php';
 $client = new RadiorecordSDK();
 ```
 
-### 2. List charts
+### 2. List chart records
 
 ```php
 try {
-    $result = $client->chart()->list();
-    if (is_array($result)) {
-        foreach ($result as $item) {
-            $d = $item->data_get();
-            echo $d["id"] . " " . $d["name"] . "\n";
-        }
+    // list() returns an array of Chart records — iterate directly.
+    $charts = $client->Chart()->list();
+    foreach ($charts as $item) {
+        echo $item["id"] . " " . $item["name"] . "\n";
     }
-} catch (\Exception $err) {
+} catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
 }
 ```
@@ -86,13 +84,17 @@ print_r($fetchdef["headers"]);
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```php
-$client = RadiorecordSDK::test();
+$client = RadiorecordSDK::test([
+    "entity" => ["chart" => ["test01" => ["id" => "test01"]]],
+]);
 
-$result = $client->chart()->load(["id" => "test01"]);
-// $result contains mock response data
+// load() returns the bare mock record (throws on error).
+$chart = $client->Chart()->load(["id" => "test01"]);
+print_r($chart);
 ```
 
 ### Use a custom fetch function
@@ -233,7 +235,7 @@ API path: `/api/chart/club`
 
 ### Chart
 
-Create an instance: `const chart = client.chart`
+Create an instance: `$chart = $client->Chart();`
 
 #### Operations
 
@@ -254,8 +256,9 @@ Create an instance: `const chart = client.chart`
 
 #### Example: List
 
-```ts
-const charts = await client.chart.list()
+```php
+// list() returns an array of Chart records (throws on error).
+$charts = $client->Chart()->list();
 ```
 
 
@@ -330,7 +333,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```php
-$chart = $client->chart();
+$chart = $client->Chart();
 $chart->load(["id" => "example_id"]);
 
 // $chart->dataGet() now returns the loaded chart data

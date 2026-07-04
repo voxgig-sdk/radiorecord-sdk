@@ -208,13 +208,7 @@ class RadiorecordSDK
   end
 
 
-  # Idiomatic facade: client.chart.list / client.chart.load({ "id" => ... })
-  def chart
-    require_relative 'entity/chart_entity'
-    @chart ||= ChartEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.chart instead.
+  # Canonical facade: client.Chart.list / client.Chart.load({ "id" => ... })
   def Chart(data = nil)
     require_relative 'entity/chart_entity'
     ChartEntity.new(self, data)

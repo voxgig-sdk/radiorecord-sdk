@@ -244,8 +244,9 @@ end
 
 
 
--- Idiomatic facade: client:chart():list() / client:chart():load({ id = ... })
-function RadiorecordSDK:chart(data)
+-- Idiomatic facade: client:Chart():list() / client:Chart():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function RadiorecordSDK:Chart(data)
   local EntityMod = require("entity.chart_entity")
   if data == nil then
     if self._chart == nil then
@@ -253,12 +254,6 @@ function RadiorecordSDK:chart(data)
     end
     return self._chart
   end
-  return EntityMod.new(self, data)
-end
-
--- Deprecated: use client:chart() instead.
-function RadiorecordSDK:Chart(data)
-  local EntityMod = require("entity.chart_entity")
   return EntityMod.new(self, data)
 end
 

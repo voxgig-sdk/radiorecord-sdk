@@ -109,7 +109,7 @@ Alias for `RadiorecordSDK.test()`.
 ## ChartEntity
 
 ```ts
-const chart = client.chart
+const chart = client.Chart()
 ```
 
 ### Fields
@@ -130,7 +130,7 @@ const chart = client.chart
 List entities matching the given criteria. Returns an array.
 
 ```ts
-const results = await client.chart.list()
+const results = await client.Chart().list()
 ```
 
 ### Common Methods

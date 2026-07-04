@@ -80,7 +80,7 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 ## ChartEntity
 
 ```python
-chart = client.chart
+chart = client.Chart()
 ```
 
 ### Fields
@@ -101,7 +101,9 @@ chart = client.chart
 List entities matching the given criteria. Returns a list and raises on error.
 
 ```python
-results = client.chart.list({})
+results = client.Chart().list({})
+for chart in results:
+    print(chart)
 ```
 
 ### Common Methods

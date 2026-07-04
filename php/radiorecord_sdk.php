@@ -233,10 +233,10 @@ class RadiorecordSDK
 
     private $_chart = null;
 
-    // Idiomatic facade: $client->chart()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Chart() (PHP method
-    // names are case-insensitive).
-    public function chart($data = null)
+    // Canonical facade: $client->Chart()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->chart()
+    // resolves here too.
+    public function Chart($data = null)
     {
         require_once __DIR__ . '/entity/chart_entity.php';
         if ($data === null) {
