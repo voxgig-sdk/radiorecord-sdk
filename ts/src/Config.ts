@@ -38,10 +38,6 @@ class Config {
   options = {
     base: 'https://www.radiorecord.ru',
 
-    auth: {
-      prefix: 'Bearer',
-    },
-
     headers: {
       "content-type": "application/json"
     },

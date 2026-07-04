@@ -43,8 +43,7 @@ class ChartEntityTest < Minitest::Test
     chart_ref01_ent = client.Chart(nil)
     chart_ref01_match = {}
 
-    chart_ref01_list_result, err = chart_ref01_ent.list(chart_ref01_match, nil)
-    assert_nil err
+    chart_ref01_list_result = chart_ref01_ent.list(chart_ref01_match, nil)
     assert chart_ref01_list_result.is_a?(Array)
 
   end
@@ -83,7 +82,6 @@ def chart_basic_setup(extra)
     "RADIORECORD_TEST_CHART_ENTID" => idmap,
     "RADIORECORD_TEST_LIVE" => "FALSE",
     "RADIORECORD_TEST_EXPLAIN" => "FALSE",
-    "RADIORECORD_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +93,6 @@ def chart_basic_setup(extra)
   if env["RADIORECORD_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["RADIORECORD_APIKEY"],
       },
       extra || {},
     ])

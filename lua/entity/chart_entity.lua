@@ -81,6 +81,10 @@ end
 
 
 
+---@param reqmatch ChartListMatch
+---@param ctrl? table
+---@return Chart[]
+---@return string? err
 function ChartEntity:list(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

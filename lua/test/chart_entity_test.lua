@@ -92,7 +92,6 @@ function chart_basic_setup(extra)
     ["RADIORECORD_TEST_CHART_ENTID"] = idmap,
     ["RADIORECORD_TEST_LIVE"] = "FALSE",
     ["RADIORECORD_TEST_EXPLAIN"] = "FALSE",
-    ["RADIORECORD_APIKEY"] = "NONE",
   })
 
   local idmap_resolved = helpers.to_map(
@@ -104,7 +103,6 @@ function chart_basic_setup(extra)
   if env["RADIORECORD_TEST_LIVE"] == "TRUE" then
     local merged_opts = vs.merge({
       {
-        apikey = env["RADIORECORD_APIKEY"],
       },
       extra or {},
     })

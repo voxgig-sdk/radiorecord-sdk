@@ -19,7 +19,6 @@ Create a new SDK client instance.
 | Name | Type | Description |
 | --- | --- | --- |
 | `options` | `table` | SDK configuration options. |
-| `options.apikey` | `string` | API key for authentication. |
 | `options.base` | `string` | Base URL for API requests. |
 | `options.prefix` | `string` | URL prefix appended after base. |
 | `options.suffix` | `string` | URL suffix appended after path. |
@@ -84,7 +83,7 @@ same parameters as `direct()`.
 ## ChartEntity
 
 ```lua
-local chart = client:Chart(nil)
+local chart = client:chart(nil)
 ```
 
 ### Fields
@@ -105,7 +104,7 @@ local chart = client:Chart(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:Chart():list()
+local results, err = client:chart():list()
 ```
 
 ### Common Methods

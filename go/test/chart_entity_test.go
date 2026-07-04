@@ -119,7 +119,6 @@ func chartBasicSetup(extra map[string]any) *entityTestSetup {
 		"RADIORECORD_TEST_CHART_ENTID": idmap,
 		"RADIORECORD_TEST_LIVE":      "FALSE",
 		"RADIORECORD_TEST_EXPLAIN":   "FALSE",
-		"RADIORECORD_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["RADIORECORD_TEST_CHART_ENTID"])
@@ -130,7 +129,6 @@ func chartBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["RADIORECORD_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
-				"apikey": env["RADIORECORD_APIKEY"],
 			},
 			extra,
 		})

@@ -245,6 +245,9 @@ func (sdk *RadiorecordSDK) Direct(fetchargs map[string]any) (map[string]any, err
 }
 
 
+// Chart returns a Chart entity bound to this client.
+// Idiomatic usage: client.Chart(nil).List(nil, nil) or
+// client.Chart(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *RadiorecordSDK) Chart(data map[string]any) RadiorecordEntity {
 	return NewChartEntityFunc(sdk, data)
 }
