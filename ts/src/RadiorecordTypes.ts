@@ -14,5 +14,12 @@ export interface Chart {
   title?: string
 }
 
-export type ChartListMatch = Partial<Chart>
+export interface ChartListMatch {
+  artist?: string
+  duration?: number
+  id?: number
+  image?: string
+  position?: number
+  title?: string
+}
 

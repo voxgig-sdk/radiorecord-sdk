@@ -8,7 +8,7 @@ Complete API reference for the Radiorecord Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'radiorecord_sdk'
+require_relative 'Radiorecord_sdk'
 
 client = RadiorecordSDK.new(options)
 ```
@@ -93,21 +93,21 @@ chart = client.Chart
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | ``$STRING`` | No |  |
-| `duration` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `position` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
+| `artist` | `String` | No |  |
+| `duration` | `Integer` | No |  |
+| `id` | `Integer` | No |  |
+| `image` | `String` | No |  |
+| `position` | `Integer` | No |  |
+| `title` | `String` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Chart.list(nil)
+results = client.Chart.list
 ```
 
 ### Common Methods

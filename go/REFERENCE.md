@@ -97,12 +97,12 @@ chart := client.Chart(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | ``$STRING`` | No |  |
-| `duration` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `position` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
+| `artist` | `string` | No |  |
+| `duration` | `int` | No |  |
+| `id` | `int` | No |  |
+| `image` | `string` | No |  |
+| `position` | `int` | No |  |
+| `title` | `string` | No |  |
 
 ### Operations
 

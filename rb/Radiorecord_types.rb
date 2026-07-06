@@ -37,7 +37,7 @@ Chart = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Chart#list (any subset of Chart fields).
+# Request payload for Chart#list.
 #
 # @!attribute [rw] artist
 #   @return [String, nil]

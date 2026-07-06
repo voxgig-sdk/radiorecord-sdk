@@ -221,7 +221,7 @@ class RadiorecordSDK:
 
 
     def Chart(self, data=None) -> "ChartEntity":
-        """Entity factory: client.Chart().list({}) / client.Chart().load({"id": ...})."""
+        """Entity factory: client.Chart().list() / client.Chart().load({"id": ...})."""
         from entity.chart_entity import ChartEntity
         return ChartEntity(self, data)
 

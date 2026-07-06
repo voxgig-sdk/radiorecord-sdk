@@ -18,8 +18,7 @@ type Chart struct {
 	Title *string `json:"title,omitempty"`
 }
 
-// ChartListMatch mirrors the chart fields as an all-optional match
-// filter (Go analog of Partial<Chart>).
+// ChartListMatch is the typed request payload for Chart.ListTyped.
 type ChartListMatch struct {
 	Artist *string `json:"artist,omitempty"`
 	Duration *int `json:"duration,omitempty"`

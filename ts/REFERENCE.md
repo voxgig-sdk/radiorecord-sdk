@@ -116,12 +116,12 @@ const chart = client.Chart()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | ``$STRING`` | No |  |
-| `duration` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `position` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
+| `artist` | `string` | No |  |
+| `duration` | `number` | No |  |
+| `id` | `number` | No |  |
+| `image` | `string` | No |  |
+| `position` | `number` | No |  |
+| `title` | `string` | No |  |
 
 ### Operations
 

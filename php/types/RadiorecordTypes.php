@@ -23,7 +23,7 @@ class Chart
     public ?string $title = null;
 }
 
-/** Match filter for Chart#list (any subset of Chart fields). */
+/** Request payload for Chart#list. */
 class ChartListMatch
 {
     public ?string $artist = null;

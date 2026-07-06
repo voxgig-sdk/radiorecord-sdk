@@ -87,21 +87,21 @@ chart = client.Chart()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | ``$STRING`` | No |  |
-| `duration` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `position` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
+| `artist` | `str` | No |  |
+| `duration` | `int` | No |  |
+| `id` | `int` | No |  |
+| `image` | `str` | No |  |
+| `position` | `int` | No |  |
+| `title` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Chart().list({})
+results = client.Chart().list()
 for chart in results:
     print(chart)
 ```
