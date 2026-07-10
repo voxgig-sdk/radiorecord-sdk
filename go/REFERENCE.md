@@ -91,6 +91,7 @@ same parameters as `Direct()`.
 
 ```go
 chart := client.Chart(nil)
+fmt.Println(chart.GetName()) // "chart"
 ```
 
 ### Fields
@@ -112,6 +113,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Chart(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 ### Common Methods

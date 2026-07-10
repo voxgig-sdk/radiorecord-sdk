@@ -15,9 +15,9 @@ main: {
           url: "https://www.radiorecord.ru"
         }
       ]
+      summary: "This API provides a JavaScript library for interacting with radiorecord.ru, allowing users to access charts, tracks, and other resources related to music streaming."
       title: "Radiorecord API"
       version: "1.0.0"
+      website: "https://radiorecord.ru"
     }
   }
-}
-
