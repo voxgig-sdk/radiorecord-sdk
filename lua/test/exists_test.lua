@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- Radiorecord SDK exists test
 
 local sdk = require("radiorecord_sdk")
 

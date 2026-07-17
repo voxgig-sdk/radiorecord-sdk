@@ -1,4 +1,4 @@
--- ProjectName SDK configuration
+-- Radiorecord SDK configuration
 
 local function make_config()
   return {
