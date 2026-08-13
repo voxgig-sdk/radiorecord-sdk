@@ -63,7 +63,7 @@ describe('ChartEntity', async () => {
     const chart_ref01_ent = client.Chart()
     const chart_ref01_match: any = {}
 
-    const chart_ref01_list = await chart_ref01_ent.list(chart_ref01_match)
+    const chart_ref01_list = (await chart_ref01_ent.list(chart_ref01_match)).map((e: any) => e.data())
 
 
   })

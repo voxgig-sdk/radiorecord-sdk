@@ -77,6 +77,7 @@ module RadiorecordConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/chart/club",
                   "parts" => [
@@ -89,7 +90,7 @@ module RadiorecordConfig
                   },
                   "transform" => {
                     "req" => "`reqdata`",
-                    "res" => "`body`",
+                    "res" => "`body.result`",
                   },
                   "index$" => 0,
                 },

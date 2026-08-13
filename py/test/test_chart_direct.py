@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from radiorecord_sdk.utility.voxgig_struct import voxgig_struct as vs
 from radiorecord_sdk import RadiorecordSDK
-from core import helpers
+from radiorecord_sdk.core import helpers
 from test import runner
 
 

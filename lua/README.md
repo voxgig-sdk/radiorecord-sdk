@@ -218,9 +218,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local chart, err = client:Chart():load()
+    local chart, err = client:Chart():list()
     if err then error(err) end
-    -- chart is the loaded record
+    -- chart is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.

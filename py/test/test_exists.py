@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Radiorecord SDK exists test
 
 import pytest
 from radiorecord_sdk import RadiorecordSDK

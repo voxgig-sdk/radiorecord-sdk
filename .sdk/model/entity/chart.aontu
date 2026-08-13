@@ -60,7 +60,7 @@ main: kit: entity: chart: {
           }
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.result`"
           }
         }
       ]

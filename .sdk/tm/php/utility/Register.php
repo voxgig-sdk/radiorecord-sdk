@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ RadiorecordUtility::setRegistrar(function (RadiorecordUtility $u): void {
     $u->prepare_params = [RadiorecordPrepareParams::class, 'call'];
     $u->prepare_path = [RadiorecordPreparePath::class, 'call'];
     $u->prepare_query = [RadiorecordPrepareQuery::class, 'call'];
+    $u->graphql_body = [RadiorecordGraphql::class, 'body'];
+    $u->graphql_errors = [RadiorecordGraphql::class, 'errors'];
     $u->result_basic = [RadiorecordResultBasic::class, 'call'];
     $u->result_body = [RadiorecordResultBody::class, 'call'];
     $u->result_headers = [RadiorecordResultHeaders::class, 'call'];

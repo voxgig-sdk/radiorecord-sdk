@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ RadiorecordUtility.registrar = ->(u) {
   u.prepare_params = RadiorecordUtilities::PrepareParams
   u.prepare_path = RadiorecordUtilities::PreparePath
   u.prepare_query = RadiorecordUtilities::PrepareQuery
+  u.graphql_body = RadiorecordUtilities::GraphqlBody
+  u.graphql_errors = RadiorecordUtilities::GraphqlErrors
   u.result_basic = RadiorecordUtilities::ResultBasic
   u.result_body = RadiorecordUtilities::ResultBody
   u.result_headers = RadiorecordUtilities::ResultHeaders

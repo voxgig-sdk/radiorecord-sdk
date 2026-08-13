@@ -16,11 +16,11 @@
 import pytest
 
 from radiorecord_sdk import RadiorecordSDK
-from core.error import RadiorecordError
-from core.result import RadiorecordResult
-from core.response import RadiorecordResponse
-from core.spec import RadiorecordSpec
-from feature.base_feature import RadiorecordBaseFeature
+from radiorecord_sdk.core.error import RadiorecordError
+from radiorecord_sdk.core.result import RadiorecordResult
+from radiorecord_sdk.core.response import RadiorecordResponse
+from radiorecord_sdk.core.spec import RadiorecordSpec
+from radiorecord_sdk.feature.base_feature import RadiorecordBaseFeature
 
 
 def _client():

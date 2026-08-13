@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import RadiorecordControl
-from core.error import RadiorecordError
-from core.result import RadiorecordResult
-from core.spec import RadiorecordSpec
+from radiorecord_sdk.config import make_config
+from radiorecord_sdk.features import _make_feature
+from radiorecord_sdk.core.control import RadiorecordControl
+from radiorecord_sdk.core.error import RadiorecordError
+from radiorecord_sdk.core.result import RadiorecordResult
+from radiorecord_sdk.core.spec import RadiorecordSpec
 
 
 # True when this SDK was generated with the named feature.

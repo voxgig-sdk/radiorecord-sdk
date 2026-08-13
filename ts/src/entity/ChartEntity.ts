@@ -37,7 +37,7 @@ class ChartEntity extends RadiorecordEntityBase<Chart> {
 
 
 
-  async list(this: any, reqmatch?: ChartListMatch, ctrl?: Control): Promise<Chart[]> {
+  async list(this: any, reqmatch?: ChartListMatch, ctrl?: Control): Promise<ChartEntity[]> {
 
     const utility = this._utility
 

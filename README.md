@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = RadiorecordSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = RadiorecordSDK.test({
+  entity: {
+    chart: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const charts = await client.Chart().list()
-// charts is an array of bare Chart records populated with mock data
+// charts is an array of Chart entities, populated with mock data
+// — call charts[0].data() for the record itself
 console.log(charts)
 ```
 
@@ -110,7 +119,7 @@ import { RadiorecordSDK } from '@voxgig-sdk/radiorecord'
 
 const client = new RadiorecordSDK()
 
-// List all charts (returns Chart[])
+// List all charts (returns ChartEntity[] — .data() for the record)
 const charts = await client.Chart().list()
 for (const chart of charts) {
   console.log(chart)
@@ -343,6 +352,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/radiorecord](https://github.com/l0v3m0n3y/radiorecord)
 

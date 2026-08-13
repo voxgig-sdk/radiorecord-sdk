@@ -9,6 +9,7 @@ guide: {
     path: "/api/chart/club": {
       action: "club": {}
       op: list: method: *GET
+      op: list: transform: res: *("`body.result`")|top
     }
   }
 

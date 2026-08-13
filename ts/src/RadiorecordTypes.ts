@@ -21,5 +21,11 @@ export interface ChartListMatch {
   image?: string
   position?: number
   title?: string
+
+  // Selects a custom action instead of the plain list:
+  //   'club'
+  // The remaining keys are that action's own payload.
+  $action?: string
+  [action: string]: any
 }
 

@@ -35,7 +35,9 @@ const client = new RadiorecordSDK()
 
 ### 2. List chart records
 
-`list()` resolves to an array of Chart objects — iterate it directly:
+`list()` resolves to an array of Chart ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const charts = await client.Chart().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = RadiorecordSDK.test()
 
 const chart = await client.Chart().list()
-// chart is a bare entity populated with mock response data
+// chart is the entity, populated with mock response data
+// — call chart.data() for the record itself
 console.log(chart)
 ```
 
