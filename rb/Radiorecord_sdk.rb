@@ -28,7 +28,7 @@ class RadiorecordSDK
     utility = RadiorecordUtility.new
     @_utility = utility
 
-    config = RadiorecordConfig.make_config
+    config = RadiorecordConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

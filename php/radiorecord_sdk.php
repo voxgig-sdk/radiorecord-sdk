@@ -40,7 +40,7 @@ class RadiorecordSDK
         $utility = new RadiorecordUtility();
         $this->_utility = $utility;
 
-        $config = RadiorecordConfig::make_config();
+        $config = RadiorecordConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

@@ -33,7 +33,7 @@ class ChartEntityTest < Minitest::Test
     assert_equal 3, seen.length
 
     # Inbound: streaming active -> yields each item from the feature.
-    cfg = RadiorecordConfig.make_config
+    cfg = RadiorecordConfig.shared_config
     if cfg["feature"].is_a?(Hash) && cfg["feature"].key?("streaming")
       sdk = RadiorecordSDK.test(seed, { "feature" => { "streaming" => { "active" => true } } })
       got = []
