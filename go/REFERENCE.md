@@ -98,12 +98,12 @@ fmt.Println(chart.GetName()) // "chart"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | `string` | No |  |
-| `duration` | `int` | No |  |
-| `id` | `int` | No |  |
-| `image` | `string` | No |  |
-| `position` | `int` | No |  |
-| `title` | `string` | No |  |
+| `artist` | `string` | No | Artist name |
+| `duration` | `int` | No | Track duration in seconds |
+| `id` | `int` | No | Track ID |
+| `image` | `string` | No | Track cover image URL |
+| `position` | `int` | No | Chart position |
+| `title` | `string` | No | Track title |
 
 ### Operations
 

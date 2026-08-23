@@ -6,7 +6,7 @@ The Golang SDK for the Radiorecord API — an entity-oriented client using stand
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Chart(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -260,12 +260,12 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"artist"` |  |
-| `"duration"` |  |
-| `"id"` |  |
-| `"image"` |  |
-| `"position"` |  |
-| `"title"` |  |
+| `"artist"` | Artist name |
+| `"duration"` | Track duration in seconds |
+| `"id"` | Track ID |
+| `"image"` | Track cover image URL |
+| `"position"` | Chart position |
+| `"title"` | Track title |
 
 Operations: List.
 
@@ -290,12 +290,12 @@ Create an instance: `chart := client.Chart(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `duration` | `int` |  |
-| `id` | `int` |  |
-| `image` | `string` |  |
-| `position` | `int` |  |
-| `title` | `string` |  |
+| `artist` | `string` | Artist name |
+| `duration` | `int` | Track duration in seconds |
+| `id` | `int` | Track ID |
+| `image` | `string` | Track cover image URL |
+| `position` | `int` | Chart position |
+| `title` | `string` | Track title |
 
 #### Example: List
 

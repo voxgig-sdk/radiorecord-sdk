@@ -90,12 +90,12 @@ local chart = client:Chart(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | `string` | No |  |
-| `duration` | `number` | No |  |
-| `id` | `number` | No |  |
-| `image` | `string` | No |  |
-| `position` | `number` | No |  |
-| `title` | `string` | No |  |
+| `artist` | `string` | No | Artist name |
+| `duration` | `number` | No | Track duration in seconds |
+| `id` | `number` | No | Track ID |
+| `image` | `string` | No | Track cover image URL |
+| `position` | `number` | No | Chart position |
+| `title` | `string` | No | Track title |
 
 ### Operations
 

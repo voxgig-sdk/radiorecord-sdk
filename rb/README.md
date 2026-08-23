@@ -237,12 +237,12 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `duration` |  |
-| `id` |  |
-| `image` |  |
-| `position` |  |
-| `title` |  |
+| `artist` | Artist name |
+| `duration` | Track duration in seconds |
+| `id` | Track ID |
+| `image` | Track cover image URL |
+| `position` | Chart position |
+| `title` | Track title |
 
 Operations: List.
 
@@ -267,12 +267,12 @@ Create an instance: `chart = client.Chart`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `String` |  |
-| `duration` | `Integer` |  |
-| `id` | `Integer` |  |
-| `image` | `String` |  |
-| `position` | `Integer` |  |
-| `title` | `String` |  |
+| `artist` | `String` | Artist name |
+| `duration` | `Integer` | Track duration in seconds |
+| `id` | `Integer` | Track ID |
+| `image` | `String` | Track cover image URL |
+| `position` | `Integer` | Chart position |
+| `title` | `String` | Track title |
 
 #### Example: List
 

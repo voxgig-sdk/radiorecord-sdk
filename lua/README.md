@@ -231,12 +231,12 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `duration` |  |
-| `id` |  |
-| `image` |  |
-| `position` |  |
-| `title` |  |
+| `artist` | Artist name |
+| `duration` | Track duration in seconds |
+| `id` | Track ID |
+| `image` | Track cover image URL |
+| `position` | Chart position |
+| `title` | Track title |
 
 Operations: List.
 
@@ -261,12 +261,12 @@ Create an instance: `local chart = client:Chart(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `duration` | `number` |  |
-| `id` | `number` |  |
-| `image` | `string` |  |
-| `position` | `number` |  |
-| `title` | `string` |  |
+| `artist` | `string` | Artist name |
+| `duration` | `number` | Track duration in seconds |
+| `id` | `number` | Track ID |
+| `image` | `string` | Track cover image URL |
+| `position` | `number` | Chart position |
+| `title` | `string` | Track title |
 
 #### Example: List
 

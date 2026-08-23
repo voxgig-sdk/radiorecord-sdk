@@ -243,12 +243,12 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `duration` |  |
-| `id` |  |
-| `image` |  |
-| `position` |  |
-| `title` |  |
+| `artist` | Artist name |
+| `duration` | Track duration in seconds |
+| `id` | Track ID |
+| `image` | Track cover image URL |
+| `position` | Chart position |
+| `title` | Track title |
 
 Operations: List.
 
@@ -273,12 +273,12 @@ Create an instance: `chart = client.Chart()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `str` |  |
-| `duration` | `int` |  |
-| `id` | `int` |  |
-| `image` | `str` |  |
-| `position` | `int` |  |
-| `title` | `str` |  |
+| `artist` | `str` | Artist name |
+| `duration` | `int` | Track duration in seconds |
+| `id` | `int` | Track ID |
+| `image` | `str` | Track cover image URL |
+| `position` | `int` | Chart position |
+| `title` | `str` | Track title |
 
 #### Example: List
 

@@ -8,31 +8,37 @@ main: kit: entity: chart: {
     {
       name: "artist"
       req: false
+      short: "Artist name"
       type: "`$STRING`"
     }
     {
       name: "duration"
       req: false
+      short: "Track duration in seconds"
       type: "`$INTEGER`"
     }
     {
       name: "id"
       req: false
+      short: "Track ID"
       type: "`$INTEGER`"
     }
     {
       name: "image"
       req: false
+      short: "Track cover image URL"
       type: "`$STRING`"
     }
     {
       name: "position"
       req: false
+      short: "Chart position"
       type: "`$INTEGER`"
     }
     {
       name: "title"
       req: false
+      short: "Track title"
       type: "`$STRING`"
     }
   ]

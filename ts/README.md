@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -287,12 +287,12 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `duration` |  |
-| `id` |  |
-| `image` |  |
-| `position` |  |
-| `title` |  |
+| `artist` | Artist name |
+| `duration` | Track duration in seconds |
+| `id` | Track ID |
+| `image` | Track cover image URL |
+| `position` | Chart position |
+| `title` | Track title |
 
 Operations: list.
 
@@ -317,12 +317,12 @@ Create an instance: `const chart = client.Chart()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `duration` | `number` |  |
-| `id` | `number` |  |
-| `image` | `string` |  |
-| `position` | `number` |  |
-| `title` | `string` |  |
+| `artist` | `string` | Artist name |
+| `duration` | `number` | Track duration in seconds |
+| `id` | `number` | Track ID |
+| `image` | `string` | Track cover image URL |
+| `position` | `number` | Chart position |
+| `title` | `string` | Track title |
 
 #### Example: List
 

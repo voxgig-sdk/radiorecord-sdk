@@ -247,12 +247,12 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `duration` |  |
-| `id` |  |
-| `image` |  |
-| `position` |  |
-| `title` |  |
+| `artist` | Artist name |
+| `duration` | Track duration in seconds |
+| `id` | Track ID |
+| `image` | Track cover image URL |
+| `position` | Chart position |
+| `title` | Track title |
 
 Operations: List.
 
@@ -277,12 +277,12 @@ Create an instance: `$chart = $client->Chart();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `duration` | `int` |  |
-| `id` | `int` |  |
-| `image` | `string` |  |
-| `position` | `int` |  |
-| `title` | `string` |  |
+| `artist` | `string` | Artist name |
+| `duration` | `int` | Track duration in seconds |
+| `id` | `int` | Track ID |
+| `image` | `string` | Track cover image URL |
+| `position` | `int` | Chart position |
+| `title` | `string` | Track title |
 
 #### Example: List
 

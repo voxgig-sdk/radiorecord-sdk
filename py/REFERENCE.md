@@ -87,12 +87,12 @@ chart = client.Chart()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | `str` | No |  |
-| `duration` | `int` | No |  |
-| `id` | `int` | No |  |
-| `image` | `str` | No |  |
-| `position` | `int` | No |  |
-| `title` | `str` | No |  |
+| `artist` | `str` | No | Artist name |
+| `duration` | `int` | No | Track duration in seconds |
+| `id` | `int` | No | Track ID |
+| `image` | `str` | No | Track cover image URL |
+| `position` | `int` | No | Chart position |
+| `title` | `str` | No | Track title |
 
 ### Operations
 

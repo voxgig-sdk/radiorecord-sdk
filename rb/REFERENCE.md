@@ -93,12 +93,12 @@ chart = client.Chart
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | `String` | No |  |
-| `duration` | `Integer` | No |  |
-| `id` | `Integer` | No |  |
-| `image` | `String` | No |  |
-| `position` | `Integer` | No |  |
-| `title` | `String` | No |  |
+| `artist` | `String` | No | Artist name |
+| `duration` | `Integer` | No | Track duration in seconds |
+| `id` | `Integer` | No | Track ID |
+| `image` | `String` | No | Track cover image URL |
+| `position` | `Integer` | No | Chart position |
+| `title` | `String` | No | Track title |
 
 ### Operations
 

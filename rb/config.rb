@@ -19,6 +19,9 @@ module RadiorecordConfig
     {
       "main" => {
         "name" => "Radiorecord",
+        "slug" => "radiorecord",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,26 +44,32 @@ module RadiorecordConfig
           "fields" => [
             {
               "name" => "artist",
+              "short" => "Artist name",
               "type" => "`$STRING`",
             },
             {
               "name" => "duration",
+              "short" => "Track duration in seconds",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "id",
+              "short" => "Track ID",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "image",
+              "short" => "Track cover image URL",
               "type" => "`$STRING`",
             },
             {
               "name" => "position",
+              "short" => "Chart position",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "title",
+              "short" => "Track title",
               "type" => "`$STRING`",
             },
           ],
