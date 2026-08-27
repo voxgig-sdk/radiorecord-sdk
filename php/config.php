@@ -42,6 +42,7 @@ class RadiorecordConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
