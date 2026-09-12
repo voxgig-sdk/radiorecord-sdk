@@ -74,6 +74,10 @@ module RadiorecordConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "chart",
           "op" => {
             "list" => {
@@ -85,10 +89,16 @@ module RadiorecordConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/chart/club",
-                  "parts" => [
-                    "api",
-                    "chart",
-                    "club",
+                  "segments" => [
+                    {
+                      "lit" => "api",
+                    },
+                    {
+                      "lit" => "chart",
+                    },
+                    {
+                      "lit" => "club",
+                    },
                   ],
                   "select" => {
                     "$action" => "club",
@@ -97,6 +107,11 @@ module RadiorecordConfig
                     "req" => "`reqdata`",
                     "res" => "`body.result`",
                   },
+                  "parts" => [
+                    "api",
+                    "chart",
+                    "club",
+                  ],
                 },
               ],
             },

@@ -62,6 +62,10 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "chart",
         ["op"] = {
           ["list"] = {
@@ -73,10 +77,16 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/chart/club",
-                ["parts"] = {
-                  "api",
-                  "chart",
-                  "club",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "chart",
+                  },
+                  {
+                    ["lit"] = "club",
+                  },
                 },
                 ["select"] = {
                   ["$action"] = "club",
@@ -84,6 +94,11 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.result`",
+                },
+                ["parts"] = {
+                  "api",
+                  "chart",
+                  "club",
                 },
               },
             },

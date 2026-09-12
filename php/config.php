@@ -88,6 +88,10 @@ class RadiorecordConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'chart',
           'op' => [
             'list' => [
@@ -99,10 +103,16 @@ class RadiorecordConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/chart/club',
-                  'parts' => [
-                    'api',
-                    'chart',
-                    'club',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'chart',
+                    ],
+                    [
+                      'lit' => 'club',
+                    ],
                   ],
                   'select' => [
                     '$action' => 'club',
@@ -110,6 +120,11 @@ class RadiorecordConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body.result`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'chart',
+                    'club',
                   ],
                 ],
               ],

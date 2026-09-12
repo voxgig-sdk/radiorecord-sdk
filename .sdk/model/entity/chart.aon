@@ -56,10 +56,16 @@ main: kit: entity: chart: {
         {
           method: "GET"
           orig: "/api/chart/club"
-          parts: [
-            "api"
-            "chart"
-            "club"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "club"
+            }
           ]
           select: {
             "$action": "club"
