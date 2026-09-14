@@ -105,7 +105,7 @@ local results, err = client:Chart():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
+| TypeScript | `@voxgig-sdk/radiorecord-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
 | Python | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
 | PHP | `voxgig-sdk/radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/radiorecord-sdk/go` | `go get github.com/voxgig-sdk/radiorecord-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Chart():list()
 ### TypeScript
 
 ```ts
-import { RadiorecordSDK } from '@voxgig-sdk/radiorecord'
+import { RadiorecordSDK } from '@voxgig-sdk/radiorecord-sdk'
 
 const client = new RadiorecordSDK()
 

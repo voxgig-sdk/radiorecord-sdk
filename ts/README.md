@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { RadiorecordSDK } from '@voxgig-sdk/radiorecord'
+import { RadiorecordSDK } from '@voxgig-sdk/radiorecord-sdk'
 
 const client = new RadiorecordSDK()
 ```
@@ -413,7 +413,7 @@ radiorecord/
 Import the SDK from the package root:
 
 ```ts
-import { RadiorecordSDK } from '@voxgig-sdk/radiorecord'
+import { RadiorecordSDK } from '@voxgig-sdk/radiorecord-sdk'
 ```
 
 ### Entity state
