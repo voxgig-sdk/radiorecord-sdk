@@ -1,12 +1,18 @@
 # Radiorecord SDK feature factory
 
 from radiorecord_sdk.feature.base_feature import RadiorecordBaseFeature
+from radiorecord_sdk.feature.ratelimit_feature import RadiorecordRatelimitFeature
+from radiorecord_sdk.feature.retry_feature import RadiorecordRetryFeature
 from radiorecord_sdk.feature.test_feature import RadiorecordTestFeature
+from radiorecord_sdk.feature.timeout_feature import RadiorecordTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: RadiorecordBaseFeature(),
+    "ratelimit": lambda: RadiorecordRatelimitFeature(),
+    "retry": lambda: RadiorecordRetryFeature(),
     "test": lambda: RadiorecordTestFeature(),
+    "timeout": lambda: RadiorecordTimeoutFeature(),
 }
 
 

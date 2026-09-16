@@ -3,26 +3,26 @@
     "chart": {
       "CHART00": {
         "artist": "s3c",
-        "duration": "s3d",
+        "duration": 61,
         "id": "CHART00",
         "image": "s3f",
-        "position": "s40",
+        "position": 64,
         "title": "s41"
       },
       "CHART01": {
         "artist": "s78",
-        "duration": "s79",
+        "duration": 121,
         "id": "CHART01",
         "image": "s7b",
-        "position": "s7c",
+        "position": 124,
         "title": "s7d"
       },
       "CHART02": {
         "artist": "sb4",
-        "duration": "sb5",
+        "duration": 181,
         "id": "CHART02",
         "image": "sb7",
-        "position": "sb8",
+        "position": 184,
         "title": "sb9"
       }
     }
@@ -31,10 +31,99 @@
     "chart": {
       "chart_ref01": {
         "artist": "sf0",
-        "duration": "sf1",
+        "duration": 241,
         "image": "sf3",
-        "position": "sf4",
+        "position": 244,
         "title": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/chart/club": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getClubChart",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "result": {
+                      "items": {
+                        "properties": {
+                          "artist": {
+                            "description": "Artist name",
+                            "type": "string"
+                          },
+                          "duration": {
+                            "description": "Track duration in seconds",
+                            "type": "integer"
+                          },
+                          "id": {
+                            "description": "Track ID",
+                            "type": "integer"
+                          },
+                          "image": {
+                            "description": "Track cover image URL",
+                            "type": "string"
+                          },
+                          "position": {
+                            "description": "Chart position",
+                            "type": "integer"
+                          },
+                          "title": {
+                            "description": "Track title",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successfully retrieved club chart"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }

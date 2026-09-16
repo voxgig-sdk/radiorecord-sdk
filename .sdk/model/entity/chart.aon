@@ -54,6 +54,12 @@ main: kit: entity: chart: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /api/chart/club"
+            json: "{\"operationId\":\"getClubChart\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"result\":{\"items\":{\"properties\":{\"artist\":{\"description\":\"Artist name\",\"type\":\"string\"},\"duration\":{\"description\":\"Track duration in seconds\",\"type\":\"integer\"},\"id\":{\"description\":\"Track ID\",\"type\":\"integer\"},\"image\":{\"description\":\"Track cover image URL\",\"type\":\"string\"},\"position\":{\"description\":\"Chart position\",\"type\":\"integer\"},\"title\":{\"description\":\"Track title\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}},\"type\":\"object\"}}},\"description\":\"Successfully retrieved club chart\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Bad request\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/chart/club"
           segments: [
