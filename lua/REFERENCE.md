@@ -86,17 +86,6 @@ same parameters as `direct()`.
 local chart = client:Chart(nil)
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `string` | No | Artist name |
-| `duration` | `number` | No | Track duration in seconds |
-| `id` | `number` | No | Track ID |
-| `image` | `string` | No | Track cover image URL |
-| `position` | `number` | No | Chart position |
-| `title` | `string` | No | Track title |
-
 ### Operations
 
 #### `list(reqmatch, ctrl) -> any, err`

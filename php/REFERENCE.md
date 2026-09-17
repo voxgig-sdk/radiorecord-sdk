@@ -88,17 +88,6 @@ Prepare a fetch definition without sending the request. Returns the
 $chart = $client->Chart();
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `string` | No | Artist name |
-| `duration` | `int` | No | Track duration in seconds |
-| `id` | `int` | No | Track ID |
-| `image` | `string` | No | Track cover image URL |
-| `position` | `int` | No | Chart position |
-| `title` | `string` | No | Track title |
-
 ### Operations
 
 #### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`

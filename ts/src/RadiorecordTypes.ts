@@ -6,21 +6,9 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface Chart {
-  artist?: string
-  duration?: number
-  id?: number
-  image?: string
-  position?: number
-  title?: string
 }
 
 export interface ChartListMatch {
-  artist?: string
-  duration?: number
-  id?: number
-  image?: string
-  position?: number
-  title?: string
 
   // Selects a custom action instead of the plain list:
   //   'club'

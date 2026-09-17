@@ -15,22 +15,10 @@ declare(strict_types=1);
 /** Chart entity data model. */
 class Chart
 {
-    public ?string $artist = null;
-    public ?int $duration = null;
-    public ?int $id = null;
-    public ?string $image = null;
-    public ?int $position = null;
-    public ?string $title = null;
 }
 
 /** Request payload for Chart#list. */
 class ChartListMatch
 {
-    public ?string $artist = null;
-    public ?int $duration = null;
-    public ?int $id = null;
-    public ?string $image = null;
-    public ?int $position = null;
-    public ?string $title = null;
 }
 

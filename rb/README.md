@@ -37,7 +37,7 @@ begin
   # list returns an Array of Chart records — iterate directly.
   charts = client.Chart.list
   charts.each do |item|
-    puts "#{item["id"]} #{item["artist"]}"
+    puts "#{item}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -237,12 +237,6 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist name |
-| `duration` | Track duration in seconds |
-| `id` | Track ID |
-| `image` | Track cover image URL |
-| `position` | Chart position |
-| `title` | Track title |
 
 Operations: List.
 
@@ -262,17 +256,6 @@ Create an instance: `chart = client.Chart`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `String` | Artist name |
-| `duration` | `Integer` | Track duration in seconds |
-| `id` | `Integer` | Track ID |
-| `image` | `String` | Track cover image URL |
-| `position` | `Integer` | Chart position |
-| `title` | `String` | Track title |
 
 #### Example: List
 
@@ -424,6 +407,7 @@ Use `Helpers.to_map()` to safely validate that a value is a hash.
 rb/
 ├── Radiorecord_sdk.rb       -- Main SDK module
 ├── config.rb                  -- Configuration
+├── schema.rb                  -- Generated option + entity specs
 ├── features.rb                -- Feature factory
 ├── core/                      -- Core types and context
 ├── entity/                    -- Entity implementations

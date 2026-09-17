@@ -94,17 +94,6 @@ chart := client.Chart(nil)
 fmt.Println(chart.GetName()) // "chart"
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `string` | No | Artist name |
-| `duration` | `int` | No | Track duration in seconds |
-| `id` | `int` | No | Track ID |
-| `image` | `string` | No | Track cover image URL |
-| `position` | `int` | No | Chart position |
-| `title` | `string` | No | Track title |
-
 ### Operations
 
 #### `List(reqmatch, ctrl map[string]any) (any, error)`

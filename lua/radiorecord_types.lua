@@ -7,20 +7,8 @@
 -- edit by hand.
 
 ---@class Chart
----@field artist? string
----@field duration? number
----@field id? number
----@field image? string
----@field position? number
----@field title? string
 
 ---@class ChartListMatch
----@field artist? string
----@field duration? number
----@field id? number
----@field image? string
----@field position? number
----@field title? string
 
 local M = {}
 

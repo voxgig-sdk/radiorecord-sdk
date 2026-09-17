@@ -88,42 +88,7 @@ func MakeConfig() map[string]any {
 		},
 		"entity": map[string]any{
 			"chart": map[string]any{
-				"fields": []any{
-					map[string]any{
-						"name": "artist",
-						"short": "Artist name",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "duration",
-						"short": "Track duration in seconds",
-						"type": "`$INTEGER`",
-					},
-					map[string]any{
-						"name": "id",
-						"short": "Track ID",
-						"type": "`$INTEGER`",
-					},
-					map[string]any{
-						"name": "image",
-						"short": "Track cover image URL",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "position",
-						"short": "Chart position",
-						"type": "`$INTEGER`",
-					},
-					map[string]any{
-						"name": "title",
-						"short": "Track title",
-						"type": "`$STRING`",
-					},
-				},
-				"id": map[string]any{
-					"field": "id",
-					"name": "id",
-				},
+				"fields": []any{},
 				"name": "chart",
 				"op": map[string]any{
 					"list": map[string]any{

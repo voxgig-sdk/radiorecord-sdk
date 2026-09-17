@@ -105,12 +105,12 @@ local results, err = client:Chart():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/radiorecord-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
-| Python | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
-| PHP | `voxgig-sdk/radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
+| TypeScript | `@voxgig-sdk/radiorecord-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/tags) |
+| Python | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/tags) |
+| PHP | `voxgig-sdk/radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/radiorecord-sdk/go` | `go get github.com/voxgig-sdk/radiorecord-sdk/go@latest` |
-| Ruby | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
-| Lua | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/releases) |
+| Ruby | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/tags) |
+| Lua | `voxgig-sdk-radiorecord` | publish pending — [install from git tag](https://github.com/voxgig-sdk/radiorecord-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/radiorecord-sdk/go-cli` | `go install github.com/voxgig-sdk/radiorecord-sdk/go-cli/cmd/radiorecord@latest` |
 | Go MCP server | `github.com/voxgig-sdk/radiorecord-sdk/go-mcp` | `go get github.com/voxgig-sdk/radiorecord-sdk/go-mcp@latest` |
 

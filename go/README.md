@@ -260,12 +260,6 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"artist"` | Artist name |
-| `"duration"` | Track duration in seconds |
-| `"id"` | Track ID |
-| `"image"` | Track cover image URL |
-| `"position"` | Chart position |
-| `"title"` | Track title |
 
 Operations: List.
 
@@ -285,17 +279,6 @@ Create an instance: `chart := client.Chart(nil)`
 | Method | Description |
 | --- | --- |
 | `List(match, ctrl)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `string` | Artist name |
-| `duration` | `int` | Track duration in seconds |
-| `id` | `int` | Track ID |
-| `image` | `string` | Track cover image URL |
-| `position` | `int` | Chart position |
-| `title` | `string` | Track title |
 
 #### Example: List
 

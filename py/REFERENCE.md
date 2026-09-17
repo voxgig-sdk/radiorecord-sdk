@@ -83,17 +83,6 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 chart = client.Chart()
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `str` | No | Artist name |
-| `duration` | `int` | No | Track duration in seconds |
-| `id` | `int` | No | Track ID |
-| `image` | `str` | No | Track cover image URL |
-| `position` | `int` | No | Chart position |
-| `title` | `str` | No | Track title |
-
 ### Operations
 
 #### `list(reqmatch=None, ctrl=None) -> list`

@@ -112,17 +112,6 @@ Alias for `RadiorecordSDK.test()`.
 const chart = client.Chart()
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `string` | No | Artist name |
-| `duration` | `number` | No | Track duration in seconds |
-| `id` | `number` | No | Track ID |
-| `image` | `string` | No | Track cover image URL |
-| `position` | `number` | No | Chart position |
-| `title` | `string` | No | Track title |
-
 ### Actions
 
 This entity exposes custom API actions in addition to the standard

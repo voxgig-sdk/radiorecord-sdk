@@ -74,15 +74,7 @@ declare class Config {
     };
     entity: {
         chart: {
-            fields: {
-                name: string;
-                short: string;
-                type: string;
-            }[];
-            id: {
-                field: string;
-                name: string;
-            };
+            fields: never[];
             name: string;
             op: {
                 list: {

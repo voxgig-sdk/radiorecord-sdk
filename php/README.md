@@ -39,7 +39,7 @@ try {
     $charts = $client->Chart()->list();
     foreach ($charts as $record) {
         $item = $record->data_get();
-        echo $item["id"] . " " . $item["artist"] . "\n";
+        echo json_encode($item) . "\n";
     }
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
@@ -248,12 +248,6 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist name |
-| `duration` | Track duration in seconds |
-| `id` | Track ID |
-| `image` | Track cover image URL |
-| `position` | Chart position |
-| `title` | Track title |
 
 Operations: List.
 
@@ -273,17 +267,6 @@ Create an instance: `$chart = $client->Chart();`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `string` | Artist name |
-| `duration` | `int` | Track duration in seconds |
-| `id` | `int` | Track ID |
-| `image` | `string` | Track cover image URL |
-| `position` | `int` | Chart position |
-| `title` | `string` | Track title |
 
 #### Example: List
 
@@ -435,6 +418,7 @@ Use `Helpers::to_map()` to safely validate that a value is an array.
 php/
 ├── radiorecord_sdk.php          -- Main SDK class
 ├── config.php                     -- Configuration
+├── schema.php                     -- Generated option + entity specs
 ├── features.php                   -- Feature factory
 ├── core/                          -- Core types and context
 ├── entity/                        -- Entity implementations

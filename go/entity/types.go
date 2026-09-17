@@ -14,22 +14,10 @@ import (
 
 // Chart is the typed data model for the chart entity.
 type Chart struct {
-	Artist *string `json:"artist,omitempty"`
-	Duration *int `json:"duration,omitempty"`
-	Id *int `json:"id,omitempty"`
-	Image *string `json:"image,omitempty"`
-	Position *int `json:"position,omitempty"`
-	Title *string `json:"title,omitempty"`
 }
 
 // ChartListMatch is the typed request payload for Chart.ListTyped.
 type ChartListMatch struct {
-	Artist *string `json:"artist,omitempty"`
-	Duration *int `json:"duration,omitempty"`
-	Id *int `json:"id,omitempty"`
-	Image *string `json:"image,omitempty"`
-	Position *int `json:"position,omitempty"`
-	Title *string `json:"title,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

@@ -146,7 +146,7 @@ await entity.list()
 
 // Subsequent calls reuse the stored state
 const data = entity.data()
-console.log(data.id)
+console.log(data)
 ```
 
 ### Add custom middleware
@@ -292,12 +292,6 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist name |
-| `duration` | Track duration in seconds |
-| `id` | Track ID |
-| `image` | Track cover image URL |
-| `position` | Chart position |
-| `title` | Track title |
 
 Operations: list.
 
@@ -317,17 +311,6 @@ Create an instance: `const chart = client.Chart()`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `string` | Artist name |
-| `duration` | `number` | Track duration in seconds |
-| `id` | `number` | Track ID |
-| `image` | `string` | Track cover image URL |
-| `position` | `number` | Chart position |
-| `title` | `string` | Track title |
 
 #### Example: List
 

@@ -43,7 +43,7 @@ local charts, err = client:Chart():list()
 if err then error(err) end
 
 for _, item in ipairs(charts) do
-  print(item["id"], item["artist"])
+  print(item)
 end
 ```
 
@@ -231,12 +231,6 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist name |
-| `duration` | Track duration in seconds |
-| `id` | Track ID |
-| `image` | Track cover image URL |
-| `position` | Chart position |
-| `title` | Track title |
 
 Operations: List.
 
@@ -256,17 +250,6 @@ Create an instance: `local chart = client:Chart(nil)`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `string` | Artist name |
-| `duration` | `number` | Track duration in seconds |
-| `id` | `number` | Track ID |
-| `image` | `string` | Track cover image URL |
-| `position` | `number` | Chart position |
-| `title` | `string` | Track title |
 
 #### Example: List
 
@@ -417,6 +400,7 @@ Use `helpers.to_map()` to safely validate that a value is a table.
 lua/
 ├── radiorecord_sdk.lua    -- Main SDK module
 ├── config.lua               -- Configuration
+├── schema.lua               -- Generated option + entity specs
 ├── features.lua             -- Feature factory
 ├── core/                    -- Core types and context
 ├── entity/                  -- Entity implementations

@@ -16,19 +16,9 @@ from __future__ import annotations
 from typing import TypedDict, Any
 
 
-class Chart(TypedDict, total=False):
-    artist: str
-    duration: int
-    id: int
-    image: str
-    position: int
-    title: str
+class Chart(TypedDict):
+    pass
 
 
-class ChartListMatch(TypedDict, total=False):
-    artist: str
-    duration: int
-    id: int
-    image: str
-    position: int
-    title: str
+class ChartListMatch(TypedDict):
+    pass

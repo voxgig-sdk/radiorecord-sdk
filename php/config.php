@@ -110,42 +110,7 @@ class RadiorecordConfig
             ],
             "entity" => [
         'chart' => [
-          'fields' => [
-            [
-              'name' => 'artist',
-              'short' => 'Artist name',
-              'type' => '`$STRING`',
-            ],
-            [
-              'name' => 'duration',
-              'short' => 'Track duration in seconds',
-              'type' => '`$INTEGER`',
-            ],
-            [
-              'name' => 'id',
-              'short' => 'Track ID',
-              'type' => '`$INTEGER`',
-            ],
-            [
-              'name' => 'image',
-              'short' => 'Track cover image URL',
-              'type' => '`$STRING`',
-            ],
-            [
-              'name' => 'position',
-              'short' => 'Chart position',
-              'type' => '`$INTEGER`',
-            ],
-            [
-              'name' => 'title',
-              'short' => 'Track title',
-              'type' => '`$STRING`',
-            ],
-          ],
-          'id' => [
-            'field' => 'id',
-            'name' => 'id',
-          ],
+          'fields' => [],
           'name' => 'chart',
           'op' => [
             'list' => [

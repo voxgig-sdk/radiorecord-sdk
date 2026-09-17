@@ -243,12 +243,6 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist name |
-| `duration` | Track duration in seconds |
-| `id` | Track ID |
-| `image` | Track cover image URL |
-| `position` | Chart position |
-| `title` | Track title |
 
 Operations: List.
 
@@ -268,17 +262,6 @@ Create an instance: `chart = client.Chart()`
 | Method | Description |
 | --- | --- |
 | `list()` | List entities, optionally matching the given criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `str` | Artist name |
-| `duration` | `int` | Track duration in seconds |
-| `id` | `int` | Track ID |
-| `image` | `str` | Track cover image URL |
-| `position` | `int` | Chart position |
-| `title` | `str` | Track title |
 
 #### Example: List
 
@@ -429,6 +412,7 @@ Use `helpers.to_map()` to safely validate that a value is a dict.
 py/
 ├── radiorecord_sdk.py         -- Main SDK module
 ├── config.py                    -- Configuration
+├── schema.py                    -- Generated option + entity specs
 ├── features.py                  -- Feature factory
 ├── core/                        -- Core types and context
 ├── entity/                      -- Entity implementations
