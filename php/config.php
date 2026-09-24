@@ -118,7 +118,6 @@ class RadiorecordConfig
               'name' => 'list',
               'points' => [
                 [
-                  'args' => [],
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/chart/club',
@@ -133,17 +132,19 @@ class RadiorecordConfig
                       'lit' => 'club',
                     ],
                   ],
-                  'select' => [
-                    '$action' => 'club',
-                  ],
-                  'transform' => [
-                    'req' => '`reqdata`',
-                    'res' => '`body.result`',
-                  ],
                   'parts' => [
                     'api',
                     'chart',
                     'club',
+                  ],
+                  'rename' => [],
+                  'transform' => [
+                    'req' => '`reqdata`',
+                    'res' => '`body.result`',
+                  ],
+                  'args' => [],
+                  'select' => [
+                    '$action' => 'club',
                   ],
                 ],
               ],

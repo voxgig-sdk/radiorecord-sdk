@@ -19,7 +19,6 @@ import type {
   ChartListMatch,
 } from '../RadiorecordTypes'
 
-// TODO: needs Entity superclass
 class ChartEntity extends RadiorecordEntityBase<Chart> {
 
   constructor(client: RadiorecordSDK, entopts: any) {

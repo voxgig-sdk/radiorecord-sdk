@@ -121,7 +121,6 @@ def make_config():
             "name": "list",
             "points": [
               {
-                "args": {},
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/chart/club",
@@ -136,18 +135,20 @@ def make_config():
                     "lit": "club",
                   },
                 ],
-                "select": {
-                  "$action": "club",
-                },
-                "transform": {
-                  "req": "`reqdata`",
-                  "res": "`body.result`",
-                },
                 "parts": [
                   "api",
                   "chart",
                   "club",
                 ],
+                "rename": {},
+                "transform": {
+                  "req": "`reqdata`",
+                  "res": "`body.result`",
+                },
+                "args": {},
+                "select": {
+                  "$action": "club",
+                },
               },
             ],
           },

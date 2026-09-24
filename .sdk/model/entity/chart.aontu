@@ -1,0 +1,48 @@
+# Entity: chart
+
+main: kit: entity: chart: {
+
+  alias: field: {}
+
+  name: "chart"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/chart/club"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/chart/club"
+          q: {
+            "$action": "club"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "chart"
+            }
+            {
+              lit: "club"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.result`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

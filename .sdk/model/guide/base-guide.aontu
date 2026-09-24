@@ -1,0 +1,19 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 1
+  metrics: count: path: 1
+  metrics: count: method: 1
+
+  entity: chart: {
+    path: "/api/chart/club": {
+      action: "club": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.result`")|top
+    }
+  }
+
+}
